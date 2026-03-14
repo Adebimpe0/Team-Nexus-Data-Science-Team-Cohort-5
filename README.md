@@ -11,13 +11,13 @@
 
 ---
 
-## 👥 Team Nexus
+##  Team Nexus
 
 We are a team of data scientists passionate about using machine learning to solve real-world healthcare problems. This capstone project demonstrates an end-to-end data science pipeline — from raw patient data to a deployed predictive model — applied to one of the most critical challenges in public health.
 
 ---
 
-## 📋 Overview
+## Overview
 
 Stroke is one of the leading causes of death and long-term disability worldwide. This project builds a machine learning system to predict stroke risk from routine patient data, enabling early preventive intervention before a stroke occurs.
 
@@ -25,7 +25,7 @@ Stroke is one of the leading causes of death and long-term disability worldwide.
 
 ---
 
-## 📊 Dataset
+##  Dataset
 
 **Source:** [Kaggle — fedesoriano (2021)](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset)  
 **Records:** 5,109 patients after cleaning | **Target:** stroke (0 = No Stroke, 1 = Stroke)
@@ -65,12 +65,12 @@ Stroke is one of the leading causes of death and long-term disability worldwide.
 | 14 | CatBoost | N/A* | 80.0% | 0.2402 | 75.24% |
 | 15 | KNN | 0.6504 | 16.0% | 0.1250 | 89.04% |
 
-> ⚠️ **The Accuracy Trap:** Random Forest (95%) and XGBoost (94%) look strong on accuracy — but catch only **10%** and **8%** of actual stroke patients. This is why we optimised for ROC-AUC and Recall, not accuracy.  
+>  **The Accuracy Trap:** Random Forest (95%) and XGBoost (94%) look strong on accuracy — but catch only **10%** and **8%** of actual stroke patients. This is why we optimised for ROC-AUC and Recall, not accuracy.  
 > *\* CatBoost AUC not printed in notebook — to be confirmed on re-run.*
 
 ---
 
-## 🔬 Methodology
+## Methodology
 
 ### Pipeline Architecture — Prevents Data Leakage
 python
@@ -99,7 +99,7 @@ grid = GridSearchCV(pipeline, param_grid,
 
 ---
 
-## 🔑 Key Findings
+##  Key Findings
 
 - **Top 3 predictors:** BMI → Avg Glucose Level → Age (LightGBM feature importance)
 - **Patients aged 65+** account for **63.9%** of all stroke cases (159 of 249)
@@ -109,7 +109,7 @@ grid = GridSearchCV(pipeline, param_grid,
 
 ---
 
-## ⚙️ Installation
+##  Installation
 
 bash
 git clone https://github.com/team-nexus/stroke-risk-prediction
@@ -121,7 +121,7 @@ pip install pandas numpy matplotlib seaborn scikit-learn xgboost \
 
 ---
 
-## 🚀 Usage
+##  Usage
 
 bash
 # Run the full notebook
@@ -139,7 +139,7 @@ print(f"Stroke Risk: {probability:.2%}")
 
 ---
 
-## ⚖️ Ethics
+##  Ethics
 
 - Model is a *screening tool only* — all final decisions must remain with a qualified clinician
 - Dataset is *59% female* — model fairness must be audited across demographic groups before deployment
@@ -149,7 +149,7 @@ print(f"Stroke Risk: {probability:.2%}")
 
 ---
 
-## 📚 References
+##  References
 
 - Fedesoriano (2021). Stroke Prediction Dataset. Kaggle.
 - Chawla et al. (2002). SMOTE: Synthetic minority over-sampling technique. JAIR.
